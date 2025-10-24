@@ -4,13 +4,13 @@ const characters = [
   { name: "Scarecrow 🌾", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/scarecrow.jpg", category: "Main Characters" },
   { name: "Tin Man 🪓", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/tinman.jpg", category: "Main Characters" },
   { name: "Cowardly Lion 🦁", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/cowardlylion.jpg", category: "Main Characters" },
-  { name: "Toto 🐕", image: "https://placeholder-url.com/toto.jpg", category: "Main Characters" },
-  { name: "The Wizard of Oz 🎩", image: "https://placeholder-url.com/wizard.jpg", category: "Main Characters" },
+  { name: "Toto 🐕", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/toto.webp", category: "Main Characters" },
+  { name: "The Wizard of Oz 🎩", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/thewizardofoz-oz.jpg", category: "Main Characters" },
 
   // Witches
   { name: "Glinda the Good Witch of the North 👸🏼", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/glindathegoodwitch.jpg", category: "Witches" },
   { name: "Wicked Witch of the West 🧹", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/wickedwitch.webp", category: "Witches" },
-  { name: "Wicked Witch of the East 🧙🏻‍♀️", image: "https://placeholder-url.com/wicked-east.jpg", category: "Witches" },
+  { name: "Wicked Witch of the East 🧙🏻‍♀️", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/wickedwitchoftheeast.jpeg", category: "Witches" },
 
   // Munchkins
   { name: "Mayor of Munchkinland �", image: "https://placeholder-url.com/mayor.jpg", category: "Munchkins" },
@@ -23,7 +23,7 @@ const characters = [
   { name: "Uncle Henry 👴🏼", image: "https://placeholder-url.com/uncle-henry.jpg", category: "Kansas Characters" },
   { name: "Professor Marvel 🔮", image: "https://placeholder-url.com/marvel.jpg", category: "Kansas Characters" },
   { name: "Miss Gulch 🚴🏼‍♀️", image: "https://placeholder-url.com/gulch.jpg", category: "Kansas Characters" },
-  { name: "Hickory 🩶", image: "https://placeholder-url.com/eureka.jpg", category: "Kansas Characters" },
+  { name: "Hickory 🩶", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/hickory.jpg", category: "Kansas Characters" },
 
   // Emerald City Residents
   { name: "Emerald City Guardian 🚪", image: "https://placeholder-url.com/guardian.jpg", category: "Emerald City Residents" },
