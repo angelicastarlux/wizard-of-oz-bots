@@ -1,0 +1,106 @@
+================================================================================
+                    FLY.IO BOT HOSTING GUIDE
+================================================================================
+
+📌 IMPORTANT: NEVER RUN YOUR BOT LOCALLY AND ON FLY.IO AT THE SAME TIME!
+   Both use the same Discord bot token = DUPLICATE MESSAGES!
+
+================================================================================
+                    FLY.IO COMMANDS REFERENCE
+================================================================================
+
+🚀 DEPLOY YOUR BOT TO FLY.IO (Push latest code to cloud)
+   flyctl deploy -a wizard-of-oz-bots
+
+📊 CHECK BOT STATUS
+   flyctl status -a wizard-of-oz-bots
+
+📋 LIST ALL YOUR FLY.IO APPS
+   flyctl apps list
+
+📝 VIEW BOT LOGS (See what's happening)
+   flyctl logs -a wizard-of-oz-bots
+
+⏸️  STOP YOUR BOT (Turn off 24/7 hosting temporarily)
+   flyctl scale count 0 -a wizard-of-oz-bots
+
+▶️  START/RESTART YOUR BOT (Turn on 24/7 hosting)
+   flyctl scale count 1 -a wizard-of-oz-bots
+
+🔄 RESTART YOUR BOT (If it's acting weird)
+   flyctl apps restart wizard-of-oz-bots
+
+🌐 OPEN FLY.IO DASHBOARD IN BROWSER
+   flyctl dashboard -a wizard-of-oz-bots
+
+💻 SSH INTO YOUR BOT (Access the cloud server)
+   flyctl ssh console -a wizard-of-oz-bots
+
+================================================================================
+                    WHEN TO USE WHAT
+================================================================================
+
+✅ FOR PRODUCTION (Users using your bot 24/7):
+   1. Make sure Fly.io bot is running: flyctl scale count 1 -a wizard-of-oz-bots
+   2. DO NOT run "node wizard-of-oz.js" locally
+   3. Your bot is online 24/7 for everyone!
+
+✅ FOR TESTING LOCALLY (Making changes & testing):
+   1. Stop Fly.io bot: flyctl scale count 0 -a wizard-of-oz-bots
+   2. Run locally: node wizard-of-oz.js
+   3. Test your changes
+   4. Stop local bot: Press Ctrl+C in terminal
+   5. Deploy to Fly.io: flyctl deploy -a wizard-of-oz-bots
+   6. Start Fly.io bot: flyctl scale count 1 -a wizard-of-oz-bots
+
+================================================================================
+                    WHY CAN'T I RUN BOTH AT ONCE?
+================================================================================
+
+❌ LOCAL BOT (Terminal/VSC):
+   - Runs on YOUR computer
+   - Uses your Discord bot token
+   - Responds to commands
+
+❌ FLY.IO BOT (Cloud):
+   - Runs on Fly.io servers (24/7)
+   - Uses the SAME Discord bot token
+   - Responds to commands
+
+⚠️  PROBLEM: Both bots have the same token, so Discord sees them as the SAME bot
+   running twice = DUPLICATE RESPONSES!
+
+✅ SOLUTION: Only run ONE at a time!
+
+================================================================================
+                    TYPICAL WORKFLOW
+================================================================================
+
+1. 📝 Make code changes in VSC
+2. ⏸️  Stop Fly.io: flyctl scale count 0 -a wizard-of-oz-bots
+3. 🧪 Test locally: node wizard-of-oz.js
+4. ✅ Verify it works
+5. ⏹️  Stop local: Ctrl+C
+6. 🚀 Deploy to Fly.io: flyctl deploy -a wizard-of-oz-bots
+7. ▶️  Start Fly.io: flyctl scale count 1 -a wizard-of-oz-bots
+8. 🎉 Your bot is live 24/7 with the new changes!
+
+================================================================================
+                    QUICK REFERENCE
+================================================================================
+
+Deploy latest code:        flyctl deploy -a wizard-of-oz-bots
+Check if bot is running:   flyctl status -a wizard-of-oz-bots
+View logs:                 flyctl logs -a wizard-of-oz-bots
+Stop bot:                  flyctl scale count 0 -a wizard-of-oz-bots
+Start bot:                 flyctl scale count 1 -a wizard-of-oz-bots
+Restart bot:               flyctl apps restart wizard-of-oz-bots
+
+================================================================================
+                    NEED HELP?
+================================================================================
+
+Fly.io Documentation: https://fly.io/docs/
+Fly.io Discord: https://fly.io/discord
+
+================================================================================

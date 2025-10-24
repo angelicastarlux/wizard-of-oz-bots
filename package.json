@@ -1,0 +1,24 @@
+{
+  "name": "wizard-of-oz-bots",
+  "version": "1.0.0",
+  "main": "wizard-of-oz.js",
+  "scripts": {
+    "start": "node wizard-of-oz.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^3.0.1",
+    "discord.js": "^14.23.2",
+    "dotenv": "^16.4.7",
+    "moment": "^2.30.1",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5"
+  },
+  "description": "",
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10"
+  }
+}

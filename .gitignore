@@ -1,0 +1,32 @@
+# Ignore environment variable files
+.env
+
+# Ignore config.js if it contains sensitive information
+config.js
+
+# Ignore test-related files (e.g., for local testing)
+test-mongoose.js
+
+# Ignore specific files in ARCHIVE folder
+ARCHIVE/
+
+# Ignore node_modules (dependencies)
+node_modules/
+
+# Ignore workspace-related files (e.g., for VSCode)
+*.code-workspace
+.vscode/
+
+# Ignore system files (like .DS_Store on macOS)
+.DS_Store
+**/.DS_Store
+.DS_Store
+
+# Ignore zip files
+*.zip
+
+# Ignore log files
+*.log
+
+# Optionally, you might want to ignore package-lock.json or other configuration files if needed
+package-lock.json

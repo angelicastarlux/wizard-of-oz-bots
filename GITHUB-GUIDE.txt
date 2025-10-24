@@ -1,0 +1,212 @@
+================================================================================
+                    GITHUB COMMIT & PUSH GUIDE
+================================================================================
+
+📌 IMPORTANT: Always commit your changes to keep your code backed up and tracked!
+
+================================================================================
+                    BASIC GIT COMMANDS
+================================================================================
+
+📊 CHECK STATUS (See what files have changed)
+   git status
+
+📝 VIEW CHANGES (See exactly what changed in files)
+   git diff
+
+➕ STAGE ALL CHANGES (Prepare files for commit)
+   git add .
+
+➕ STAGE SPECIFIC FILE (Prepare one file for commit)
+   git add filename.js
+
+💾 COMMIT CHANGES (Save changes with a message)
+   git commit -m "Your commit message here"
+
+🚀 PUSH TO GITHUB (Upload commits to GitHub)
+   git push origin main
+
+📥 PULL LATEST CHANGES (Download updates from GitHub)
+   git pull origin main
+
+📋 VIEW COMMIT HISTORY
+   git log --oneline
+
+🔙 UNDO STAGED CHANGES (Before commit)
+   git reset HEAD filename.js
+
+🔙 UNDO ALL STAGED CHANGES
+   git reset HEAD .
+
+================================================================================
+                    TYPICAL WORKFLOW (STEP-BY-STEP)
+================================================================================
+
+1. 📝 Make changes to your code in VS Code
+
+2. 📊 Check what changed:
+   git status
+
+3. 📝 (Optional) See detailed changes:
+   git diff
+
+4. ➕ Stage your changes:
+   git add .
+   
+   OR stage specific files:
+   git add nonSlashCommands.js wizard-of-oz.js
+
+5. 💾 Commit with a clear message:
+   git commit -m "Fixed duplicate bot responses and added roll limits"
+
+6. 🚀 Push to GitHub:
+   git push origin main
+
+7. ✅ Done! Your changes are now on GitHub!
+
+================================================================================
+                    WRITING GOOD COMMIT MESSAGES
+================================================================================
+
+✅ GOOD Examples:
+   git commit -m "Fix duplicate messages by adding handler guard"
+   git commit -m "Add character claiming cooldown system"
+   git commit -m "Update roll limit to 10 per hour"
+   git commit -m "Remove deprecated bot.js file"
+
+❌ BAD Examples:
+   git commit -m "fix"
+   git commit -m "updates"
+   git commit -m "changes"
+   git commit -m "asdfasdf"
+
+📝 Tips for commit messages:
+   - Start with a verb (Fix, Add, Update, Remove)
+   - Be specific about what changed
+   - Keep it under 72 characters if possible
+   - Use present tense ("Fix" not "Fixed")
+
+================================================================================
+                    QUICK REFERENCE SHORTCUTS
+================================================================================
+
+Stage everything and commit in one line:
+   git add . && git commit -m "Your message"
+
+Stage, commit, and push in one line:
+   git add . && git commit -m "Your message" && git push origin main
+
+Check if you have uncommitted changes:
+   git status
+
+See what branch you're on:
+   git branch
+
+================================================================================
+                    COMMON SCENARIOS
+================================================================================
+
+🔹 SCENARIO 1: Made changes, want to save to GitHub
+   git add .
+   git commit -m "Describe what you changed"
+   git push origin main
+
+🔹 SCENARIO 2: Want to see what you changed before committing
+   git status          # See which files changed
+   git diff            # See exact changes
+   git add .
+   git commit -m "Your message"
+   git push origin main
+
+🔹 SCENARIO 3: Accidentally staged wrong file
+   git reset HEAD wrongfile.js   # Unstage that file
+   git add correctfile.js         # Stage correct file
+   git commit -m "Your message"
+   git push origin main
+
+🔹 SCENARIO 4: Want to undo last commit (but keep changes)
+   git reset HEAD~1
+   # Your changes are still there, just uncommitted
+
+🔹 SCENARIO 5: Forgot to include a file in last commit
+   git add forgottenfile.js
+   git commit --amend --no-edit
+   git push origin main --force
+
+================================================================================
+                    WORKING WITH FLY.IO + GITHUB
+================================================================================
+
+When making changes that need to go live:
+
+1. Make your code changes
+2. Test locally (stop Fly.io first!)
+3. Commit to GitHub:
+   git add .
+   git commit -m "Describe your changes"
+   git push origin main
+4. Deploy to Fly.io:
+   flyctl deploy -a wizard-of-oz-bots
+5. Start Fly.io:
+   flyctl scale count 1 -a wizard-of-oz-bots
+
+================================================================================
+                    TROUBLESHOOTING
+================================================================================
+
+❌ Error: "Your branch is behind 'origin/main'"
+   Solution: git pull origin main
+
+❌ Error: "Please commit your changes or stash them"
+   Solution: git add . && git commit -m "Save changes"
+
+❌ Error: "fatal: not a git repository"
+   Solution: You're in the wrong folder. cd to your project folder.
+
+❌ Want to discard all local changes and match GitHub:
+   git reset --hard origin/main
+   (WARNING: This deletes your local changes!)
+
+❌ Merge conflict:
+   1. Open the conflicted file
+   2. Look for <<<<<<< HEAD markers
+   3. Manually fix the conflicts
+   4. git add .
+   5. git commit -m "Resolve merge conflict"
+   6. git push origin main
+
+================================================================================
+                    .GITIGNORE REMINDER
+================================================================================
+
+Your .gitignore file prevents certain files from being committed:
+   - node_modules/
+   - .env
+   - .DS_Store
+   - *.zip
+
+Never commit:
+   ❌ .env files (contains secrets!)
+   ❌ node_modules (too big, can be reinstalled)
+   ❌ .DS_Store (Mac system files)
+
+================================================================================
+                    HELPFUL TIPS
+================================================================================
+
+💡 Commit often! Don't wait until you have 100 changes.
+💡 Push to GitHub regularly to back up your work.
+💡 Use clear, descriptive commit messages.
+💡 Check "git status" before committing to see what you're about to commit.
+💡 Use "git diff" to review your changes before committing.
+💡 If unsure, commit locally first, then push to GitHub later.
+
+================================================================================
+                    NEED HELP?
+================================================================================
+
+Git Documentation: https://git-scm.com/doc
+GitHub Guides: https://guides.github.com/
+Git Cheat Sheet: https://education.github.com/git-cheat-sheet-education.pdf
+
+================================================================================
