@@ -1,18 +1,16 @@
 const characters = [
   // Main Characters
-  { name: "Dorothy Gale �", image: "https://placeholder-url.com/dorothy.jpg", category: "Main Characters" },
-  { name: "Scarecrow �", image: "https://placeholder-url.com/scarecrow.jpg", category: "Main Characters" },
-  { name: "Tin Man 🪓", image: "https://placeholder-url.com/tinman.jpg", category: "Main Characters" },
-  { name: "Cowardly Lion �", image: "https://placeholder-url.com/lion.jpg", category: "Main Characters" },
-  { name: "Toto �", image: "https://placeholder-url.com/toto.jpg", category: "Main Characters" },
+  { name: "Dorothy Gale 👠", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/dorothygale.jpg", category: "Main Characters" },
+  { name: "Scarecrow 🌾", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/scarecrow.jpg", category: "Main Characters" },
+  { name: "Tin Man 🪓", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/tinman.jpg", category: "Main Characters" },
+  { name: "Cowardly Lion 🦁", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/cowardlylion.jpg", category: "Main Characters" },
+  { name: "Toto 🐕", image: "https://placeholder-url.com/toto.jpg", category: "Main Characters" },
   { name: "The Wizard of Oz 🎩", image: "https://placeholder-url.com/wizard.jpg", category: "Main Characters" },
 
   // Witches
-  { name: "Glinda the Good Witch ✨", image: "https://placeholder-url.com/glinda.jpg", category: "Witches" },
-  { name: "Wicked Witch of the West �", image: "https://placeholder-url.com/wicked-west.jpg", category: "Witches" },
-  { name: "Wicked Witch of the East �", image: "https://placeholder-url.com/wicked-east.jpg", category: "Witches" },
-  { name: "Wicked Witch of the North ❄️", image: "https://placeholder-url.com/wicked-north.jpg", category: "Witches" },
-  { name: "Wicked Witch of the South �", image: "https://placeholder-url.com/wicked-south.jpg", category: "Witches" },
+  { name: "Glinda the Good Witch of the North 👸🏼", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/glindathegoodwitch.jpg", category: "Witches" },
+  { name: "Wicked Witch of the West 🧹", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/wickedwitch.webp", category: "Witches" },
+  { name: "Wicked Witch of the East 🧙🏻‍♀️", image: "https://placeholder-url.com/wicked-east.jpg", category: "Witches" },
 
   // Munchkins
   { name: "Mayor of Munchkinland �", image: "https://placeholder-url.com/mayor.jpg", category: "Munchkins" },
@@ -21,10 +19,11 @@ const characters = [
   { name: "Lullaby League Member �", image: "https://placeholder-url.com/lullaby.jpg", category: "Munchkins" },
 
   // Kansas Characters
-  { name: "Aunt Em 👵", image: "https://placeholder-url.com/aunt-em.jpg", category: "Kansas Characters" },
-  { name: "Uncle Henry �", image: "https://placeholder-url.com/uncle-henry.jpg", category: "Kansas Characters" },
-  { name: "Professor Marvel �", image: "https://placeholder-url.com/marvel.jpg", category: "Kansas Characters" },
-  { name: "Miss Gulch �", image: "https://placeholder-url.com/gulch.jpg", category: "Kansas Characters" },
+  { name: "Aunt Em 👵🏼", image: "https://placeholder-url.com/aunt-em.jpg", category: "Kansas Characters" },
+  { name: "Uncle Henry 👴🏼", image: "https://placeholder-url.com/uncle-henry.jpg", category: "Kansas Characters" },
+  { name: "Professor Marvel 🔮", image: "https://placeholder-url.com/marvel.jpg", category: "Kansas Characters" },
+  { name: "Miss Gulch 🚴🏼‍♀️", image: "https://placeholder-url.com/gulch.jpg", category: "Kansas Characters" },
+  { name: "Hickory 🩶", image: "https://placeholder-url.com/eureka.jpg", category: "Kansas Characters" },
 
   // Emerald City Residents
   { name: "Emerald City Guardian 🚪", image: "https://placeholder-url.com/guardian.jpg", category: "Emerald City Residents" },
@@ -42,8 +41,11 @@ const characters = [
   { name: "Citizen of Oz �", image: "https://placeholder-url.com/citizen.jpg", category: "Citizens of Oz" },
 
   // Supporting Characters
-  { name: "Trees in the Forest �", image: "https://placeholder-url.com/trees.jpg", category: "Supporting Characters" },
-  { name: "The Crows �‍⬛", image: "https://placeholder-url.com/crows.jpg", category: "Supporting Characters" }
+  { name: "Trees in the Forest 🌳", image: "https://placeholder-url.com/trees.jpg", category: "Supporting Characters" },
+  { name: "The Crows 🐦‍⬛", image: "https://placeholder-url.com/crows.jpg", category: "Supporting Characters" },
+
+  // Miscellaneous
+  { name: "Yellow Brick Road 🟨", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/did-dorothy-in-the-wizard-of-oz-hurt-the-feelings-of-the-v0-3wijm3joko4f1.jpg", category: "Miscellaneous" }
 
 ];
 module.exports = characters;
