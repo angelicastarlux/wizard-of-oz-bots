@@ -16,7 +16,8 @@ const categories = [
   "Book Characters",
   "Quadlings",
   "Winkies",
-  "Gillikins"
+  "Gillikins",
+  "Miscellaneous"
 ];
 
 // Define the categories command with all required fields
