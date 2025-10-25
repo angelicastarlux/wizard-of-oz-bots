@@ -41,5 +41,4 @@ dist/
 build/
 coverage/
 
-# Optionally, you might want to ignore package-lock.json or other configuration files if needed
-package-lock.json
+# Keep lockfiles tracked for reproducible installs
