@@ -98,3 +98,13 @@ Notes:
 
 - 84992 = View Channels (1024) + Send Messages (2048) + Embed Links (16384) + Read Message History (65536)
 - You can add more permissions (e.g., Add Reactions 64, Use External Emojis 262144) if your bot needs them.
+
+Extended invite link (adds reactions + external emojis):
+
+```
+https://discord.com/api/oauth2/authorize?client_id=1430116475422904422&scope=bot%20applications.commands&permissions=347200
+```
+
+Breakdown:
+
+- 347200 = 84992 (minimal) + Add Reactions (64) + Use External Emojis (262144)
