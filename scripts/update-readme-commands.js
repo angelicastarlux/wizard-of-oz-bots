@@ -5,6 +5,8 @@ const path = require('path');
 // Paths
 const repoRoot = path.resolve(__dirname, '..');
 const registerPath = path.join(repoRoot, 'registerCommands.js');
+const nonSlashPath = path.join(repoRoot, 'nonSlashCommands.js');
+const configPath = path.join(repoRoot, 'config.json');
 const readmePath = path.join(repoRoot, 'README.md');
 
 function loadSlashCommands() {
@@ -20,6 +22,42 @@ function renderTable(rows) {
   const header = '| Command | Description |\n| --- | --- |\n';
   const body = rows.map((r) => `| \`/${r.name}\` | ${r.description} |`).join('\n');
   return header + body + '\n';
+}
+
+function loadPrefixCommands() {
+  const content = fs.readFileSync(nonSlashPath, 'utf8');
+  const prefix = (() => {
+    try {
+      // eslint-disable-next-line global-require, import/no-dynamic-require
+      const cfg = require(configPath);
+      return cfg.prefix || '!';
+    } catch (e) {
+      return '!';
+    }
+  })();
+
+  // Extract case 'xxx': occurrences in order
+  const re = /case\s+["'`]([a-zA-Z0-9_-]+)["'`]\s*:/g;
+  const seen = new Set();
+  const names = [];
+  let m;
+  while ((m = re.exec(content))) {
+    const name = m[1];
+    if (!seen.has(name)) {
+      seen.add(name);
+      names.push(name);
+    }
+  }
+
+  // Descriptions for known commands
+  const descMap = {
+    ow: 'Roll a random Wizard of Oz character (10 rolls per hour; claim with 💖)',
+    pl: 'Show the character list with pagination buttons',
+    or: 'Show your roll status (rolls remaining, reset time, claims left)',
+    r: 'Quick view of rolls remaining and time until next roll',
+  };
+
+  return names.map((n) => ({ name: `${prefix}${n}`, description: descMap[n] || 'Prefix command' }));
 }
 
 function updateSection(content, startMarker, endMarker, newBlock) {
@@ -46,8 +84,11 @@ function main() {
     slashTable
   );
 
-  // Prefix commands: keep static table here; adjust if you later want to parse from code
-  const prefixTable = `| Command | Description |\n| --- | --- |\n| \`!ow\` | Roll a random Wizard of Oz character (10 rolls per hour; claim with 💖) |\n| \`!pl\` | Show the character list with pagination buttons |\n| \`!or\` | Show your roll status (rolls remaining, reset time, claims left) |\n| \`!r\` | Quick view of rolls remaining and time until next roll |\n`;
+  // Prefix commands: parsed from nonSlashCommands.js
+  const prefixRows = loadPrefixCommands();
+  const prefixHeader = '| Command | Description |\n| --- | --- |\n';
+  const prefixBody = prefixRows.map((p) => `| \`${p.name}\` | ${p.description} |`).join('\n');
+  const prefixTable = prefixHeader + prefixBody + '\n';
 
   const updated2 = updateSection(
     updated1,
