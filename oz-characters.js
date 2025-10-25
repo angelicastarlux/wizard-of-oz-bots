@@ -3,6 +3,7 @@ const characters = [
   { name: "Dorothy Gale 👠", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/dorothygale.jpg", category: "Main Characters" },
   { name: "Scarecrow 🌾", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/scarecrow.jpg", category: "Main Characters" },
   { name: "Tin Man 🪓", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/tinman.jpg", category: "Main Characters" },
+  { name: "Tin Man - Crying 😭", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/lioness.jpg", category: "Main Characters" },
   { name: "Cowardly Lion 🦁", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/cowardlylion.jpg", category: "Main Characters" },
   { name: "Toto 🐕", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/toto.webp", category: "Main Characters" },
   { name: "The Wizard of Oz 🎩", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/thewizardofoz-oz.jpg", category: "Main Characters" },
@@ -13,16 +14,18 @@ const characters = [
   { name: "Wicked Witch of the East 🧙🏻‍♀️", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/wickedwitchoftheeast.jpeg", category: "Witches" },
 
   // Munchkins
-  { name: "Mayor of Munchkinland �", image: "https://placeholder-url.com/mayor.jpg", category: "Munchkins" },
-  { name: "Munchkin Coroner �", image: "https://placeholder-url.com/coroner.jpg", category: "Munchkins" },
-  { name: "Lollipop Guild Member �", image: "https://placeholder-url.com/lollipop.jpg", category: "Munchkins" },
-  { name: "Lullaby League Member �", image: "https://placeholder-url.com/lullaby.jpg", category: "Munchkins" },
+  { name: "Mayor of Munchkinland 👨🏼‍⚖️", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/mayorofmunchkinland.webp", category: "Munchkins" },
+  { name: "Coroner of Munchkinland ⚰️", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/coronerofmunchkinland.jpg", category: "Munchkins" },
+  { name: "Lollipop Guild Member - Red 🍭", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/lollipopguild-red.jpg", category: "Munchkins" },
+  { name: "Lollipop Guild Member - Green 🍭", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/lollipopguild-green.jpg", category: "Munchkins" },
+  { name: "Lollipop Guild Member - Blue 🍭", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/lollipopguild-blue.jpg", category: "Munchkins" },
+  { name: "Lullaby League 🩰", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/lullabyleague.webp", category: "Munchkins" },
 
   // Kansas Characters
-  { name: "Aunt Em 👵🏼", image: "https://placeholder-url.com/aunt-em.jpg", category: "Kansas Characters" },
-  { name: "Uncle Henry 👴🏼", image: "https://placeholder-url.com/uncle-henry.jpg", category: "Kansas Characters" },
-  { name: "Professor Marvel 🔮", image: "https://placeholder-url.com/marvel.jpg", category: "Kansas Characters" },
-  { name: "Miss Gulch 🚴🏼‍♀️", image: "https://placeholder-url.com/gulch.jpg", category: "Kansas Characters" },
+  { name: "Auntie Em 🧑🏼‍🌾", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/auntieem.webp", category: "Kansas Characters" },
+  { name: "Uncle Henry 👨🏼‍🌾", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/unclehenry.webp", category: "Kansas Characters" },
+  { name: "Professor Marvel 🔮", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/professormarvel.webp", category: "Kansas Characters" },
+  { name: "Miss Gulch 🚴🏼‍♀️", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/missgulch.jpg", category: "Kansas Characters" },
   { name: "Hickory 🩶", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/hickory.jpg", category: "Kansas Characters" },
 
   // Emerald City Residents
@@ -30,8 +33,8 @@ const characters = [
   { name: "Emerald City Carriage Driver 🐴", image: "https://placeholder-url.com/carriage.jpg", category: "Emerald City Residents" },
 
   // Winged Monkeys
-  { name: "Nikko (Lead Flying Monkey) �", image: "https://placeholder-url.com/nikko.jpg", category: "Winged Monkeys" },
-  { name: "Flying Monkey �", image: "https://placeholder-url.com/monkey.jpg", category: "Winged Monkeys" },
+  { name: "Nikko (Lead Flying Monkey) 🦍", image: "https://placeholder-url.com/nikko.jpg", category: "Winged Monkeys" },
+  { name: "Flying Monkey 🐵", image: "https://placeholder-url.com/monkey.jpg", category: "Winged Monkeys" },
 
   // Guards & Soldiers
   { name: "Winkie Guard �️", image: "https://placeholder-url.com/winkie.jpg", category: "Guards & Soldiers" },
