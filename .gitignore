@@ -1,5 +1,8 @@
 # Ignore environment variable files
 .env
+# Ignore any additional env variants but keep example
+.env.*
+!.env.example
 
 # Ignore config.js if it contains sensitive information
 config.js
@@ -17,6 +20,9 @@ node_modules/
 *.code-workspace
 .vscode/
 
+# Ignore JetBrains IDE files
+.idea/
+
 # Ignore system files (like .DS_Store on macOS)
 .DS_Store
 **/.DS_Store
@@ -27,6 +33,13 @@ node_modules/
 
 # Ignore log files
 *.log
+nohup.out
+logs/
+
+# Ignore common build/coverage output
+dist/
+build/
+coverage/
 
 # Optionally, you might want to ignore package-lock.json or other configuration files if needed
 package-lock.json
