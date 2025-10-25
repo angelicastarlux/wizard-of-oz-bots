@@ -1,0 +1,47 @@
+name: Sync README commands
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'registerCommands.js'
+      - 'categories.js'
+      - 'scripts/update-readme-commands.js'
+      - 'README.md'
+      - 'package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (lockfile)
+        run: npm ci
+
+      - name: Run README sync script
+        run: node scripts/update-readme-commands.js
+
+      - name: Commit and push if README changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "No README changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs(oz): auto-sync README commands [skip ci]"
+          git push
