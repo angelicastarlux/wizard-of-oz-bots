@@ -42,6 +42,14 @@ npm start
 
 This runs `node wizard-of-oz.js`.
 
+### 3.1) Verify the bot is online
+
+In your Discord server where the bot is invited:
+
+- Use the slash command `/characters` — you should see a list of Wizard of Oz characters.
+- Or use the prefix command for a roll (default prefix `!`): `!ow`
+	- If it responds with a character embed, your bot is online and responding.
+
 ### 4) (Optional) Register slash commands
 
 If you need to re-register slash commands (e.g., first run or changed command definitions):
