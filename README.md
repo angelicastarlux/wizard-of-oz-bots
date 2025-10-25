@@ -63,3 +63,27 @@ node wizard-of-oz-reg-commands.js
 - Embed images must use absolute URLs (e.g., GitHub raw links), not local file paths.
 - If you change dependencies, commit both `package.json` and `package-lock.json`.
 - Use `npm ci` in CI environments for reproducible installs.
+
+## Invite the bot to a server
+
+Use the Discord Developer Portal to generate a safe OAuth2 invite URL:
+
+1. Open your application in the Discord Developer Portal.
+2. Go to OAuth2 → URL Generator.
+3. Scopes: check `bot` and `applications.commands`.
+4. Bot Permissions (minimum recommended):
+	- View Channels
+	- Send Messages
+	- Embed Links
+	- Read Message History
+	- Add Reactions (optional)
+	- Use External Emojis (optional)
+5. Copy the generated URL and open it in your browser to invite the bot to a server where you have permissions.
+
+URL template if you prefer manual construction:
+
+```
+https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot%20applications.commands&permissions=PERMISSIONS_INTEGER
+```
+
+Replace `YOUR_CLIENT_ID` with the value from your `.env` and `PERMISSIONS_INTEGER` with the value from the URL Generator.
