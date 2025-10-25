@@ -45,7 +45,13 @@ function loadPrefixCommands() {
     const name = m[1];
     if (!seen.has(name)) {
       seen.add(name);
-      names.push(name);
+      // Capture trailing inline comment on the same line, if present
+      const lineStart = content.lastIndexOf('\n', m.index) + 1;
+      const lineEnd = content.indexOf('\n', m.index);
+      const line = content.slice(lineStart, lineEnd === -1 ? content.length : lineEnd);
+      const commentMatch = line.match(/\/\/\s*(.+)$/);
+      const inlineComment = commentMatch ? commentMatch[1].trim() : '';
+      names.push({ name, inlineComment });
     }
   }
 
@@ -57,7 +63,11 @@ function loadPrefixCommands() {
     r: 'Quick view of rolls remaining and time until next roll',
   };
 
-  return names.map((n) => ({ name: `${prefix}${n}`, description: descMap[n] || 'Prefix command' }));
+  return names.map((obj) => {
+    const cmd = obj.name;
+    const desc = descMap[cmd] || (obj.inlineComment ? obj.inlineComment : 'Prefix command');
+    return { name: `${prefix}${cmd}`, description: desc };
+  });
 }
 
 function updateSection(content, startMarker, endMarker, newBlock) {
