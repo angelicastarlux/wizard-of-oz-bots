@@ -87,3 +87,14 @@ https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot%20ap
 ```
 
 Replace `YOUR_CLIENT_ID` with the value from your `.env` and `PERMISSIONS_INTEGER` with the value from the URL Generator.
+
+Quick invite link (pre-filled with your client ID and minimal perms):
+
+```
+https://discord.com/api/oauth2/authorize?client_id=1430116475422904422&scope=bot%20applications.commands&permissions=84992
+```
+
+Notes:
+
+- 84992 = View Channels (1024) + Send Messages (2048) + Embed Links (16384) + Read Message History (65536)
+- You can add more permissions (e.g., Add Reactions 64, Use External Emojis 262144) if your bot needs them.
