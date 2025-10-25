@@ -4,6 +4,7 @@
   "main": "wizard-of-oz.js",
   "scripts": {
     "start": "node wizard-of-oz.js",
+    "update:readme": "node scripts/update-readme-commands.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
