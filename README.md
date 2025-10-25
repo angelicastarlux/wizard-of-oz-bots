@@ -58,6 +58,26 @@ If you need to re-register slash commands (e.g., first run or changed command de
 node wizard-of-oz-reg-commands.js
 ```
 
+## Commands
+
+### Prefix commands (default `!`)
+
+- `!ow` — Roll a random Wizard of Oz character (10 rolls per hour; shows an embed and lets users claim with 💖)
+- `!pl` — Show the character list with pagination buttons
+- `!or` — Show your roll status (rolls remaining, time until reset, claims left)
+- `!r` — Quick view of rolls remaining and time until next roll
+
+### Slash commands
+
+- `/ozwaifus` — Show your favorite Oz characters
+- `/harem` — Manage your harem
+- `/collection` — View your collection of characters
+- `/characters` — Show available Wizard of Oz characters
+- `/reset-harem` — Reset your harem
+- `/trade` — Trade characters
+- `/search-characters` — Search for Wizard of Oz characters
+- `/categories` — Show available character categories
+
 ## Troubleshooting
 
 - Embed images must use absolute URLs (e.g., GitHub raw links), not local file paths.
