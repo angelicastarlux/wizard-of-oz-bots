@@ -1,6 +1,5 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, AttachmentBuilder } = require('discord.js');
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { prefix } = require('./config.json');
-const Canvas = require('canvas');
 const characters = require('./oz-characters'); // Assuming your character list is an array of objects
 const cooldowns = new Map();
 // Map to store claimed characters with server-specific ownership
