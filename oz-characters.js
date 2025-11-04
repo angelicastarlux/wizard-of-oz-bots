@@ -3,7 +3,7 @@ const characters = [
   { name: "Dorothy Gale 👠", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/dorothygale.jpg", category: "Main Characters" },
   { name: "Scarecrow 🌾", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/scarecrow.jpg", category: "Main Characters" },
   { name: "Tin Man 🪓", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/tinman.jpg", category: "Main Characters" },
-  { name: "Tin Man - Crying 😭", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/tinmancrying.png", category: "Main Characters" },
+  { name: "Tin Man - Crying 😭", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/tinmancrying.jpg", category: "Main Characters" },
   { name: "Cowardly Lion 🦁", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/cowardlylion.jpg", category: "Main Characters" },
   { name: "Toto 🐕", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/toto.webp", category: "Main Characters" },
   { name: "The Wizard of Oz 🎩", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/thewizardofoz-oz.jpg", category: "Main Characters" },
