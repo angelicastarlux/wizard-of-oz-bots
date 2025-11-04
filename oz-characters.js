@@ -48,7 +48,7 @@ const characters = [
   { name: "The Crows 🐦‍⬛", image: "https://placeholder-url.com/crows.jpg", category: "Supporting Characters" },
 
   // Miscellaneous
-  { name: "Dorothy Kisses Tin Man Goodbye 💋", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/dorothykisstinman.png", category: "Miscellaneous" }
+  { name: "Dorothy Kisses Tin Man Goodbye 💋", image: "https://raw.githubusercontent.com/angelicastarlux/wizard-of-oz-bots/main/images/dorothykisstinman.jpg", category: "Miscellaneous" }
 
 ];
 module.exports = characters;
